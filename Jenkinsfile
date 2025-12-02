@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     echo 'deploying the application...'
-                    sh "aws eks update-kubeconfig --name your-cluster-name --region eu-west-3"
+                    sh "aws eks update-kubeconfig --name demo-cluster --region eu-west-3"
                     sh "kubectl get nodes"                       
                     sh "kubectl create deployment nginx-deployment --image=nginx "
                     
