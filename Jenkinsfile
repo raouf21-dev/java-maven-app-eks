@@ -37,7 +37,8 @@ pipeline {
             }
             steps {
                 script {
-                    gv.deployApp()
+                    echo 'deploying the application...'
+                    sh "kubectl create deployment nginx-deployment --image=nginx "
                     
                 }
             }
